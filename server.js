@@ -17,3 +17,13 @@ app.get('/', function(req, res){
   console.log('base url hit');
   res.sendFile(path.resolve('views/index.html'));
 });
+
+app.get('/images', function(req, res){
+  console.log('hit to /images');
+  res.send('quack');
+});
+
+app.post('/images',function(){
+  console.log('hit to post /images', req.body);
+  res.send('ribbet');
+});
